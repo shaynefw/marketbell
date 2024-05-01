@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock Market Alarm Clock</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body class="bg-dark text-white">
+    <div class="container text-center py-5">
+        <h1 class="mb-4">Stock Market Alarm Clock</h1>
+        <p class="lead">Click the button to start monitoring stock market hours in real-time.</p>
+        <button id="startButton" class="btn btn-lg btn-success mb-3"><i class="fas fa-bell"></i> Turn On Alarm Clock</button>
+        
+        <div id="alarmStatus" class="alert alert-info mt-3" role="alert">Waiting for the stock market to open...</div>
+    </div>
+    <audio id="alarmSound" src="./assets/audio/alarm.mp3" preload="auto"></audio>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
