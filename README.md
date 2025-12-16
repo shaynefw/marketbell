@@ -17,8 +17,6 @@ Market Bell is a responsive, web-based trading utility designed to audibly alert
 
 ![Market Bell Interface](./assets/image/screenshot.png)
 
-*Note: Replace the image above with a screenshot of your actual application. Create a folder named "assets" in your repository and upload your screenshot there as "screenshot.png".*
-
 1.  **Open the Application**: Navigate to the deployed link.
 2.  **Select a Schedule**: Use the dropdown to select "US Stocks" (9:30 - 4:00) or "US Futures" (9:30 - 5:00).
 3.  **Customize (Optional)**: Manually adjust the times if you trade specific hours.
@@ -28,7 +26,7 @@ Market Bell is a responsive, web-based trading utility designed to audibly alert
 ## License
 MIT License
 
-Copyright (c) 2025 [Your Name]
+Copyright (c) 2025
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
