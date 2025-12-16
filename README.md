@@ -6,7 +6,6 @@ Market Bell is a responsive, web-based trading utility designed to audibly alert
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
-* [License](#license)
 * [Features](#features)
 
 ## Installation
