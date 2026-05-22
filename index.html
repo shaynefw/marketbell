@@ -220,6 +220,31 @@
     .status-firing { color: var(--success); }
     .status-idle { color: var(--danger); }
 
+    .countdown-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 18px;
+      padding: 10px 20px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.12);
+      border-radius: 999px;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .countdown-bar .countdown-label {
+      color: var(--text-muted);
+    }
+
+    .countdown-bar .countdown-time {
+      font-family: "SF Mono", ui-monospace, Menlo, Monaco, Consolas, monospace;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: 0.02em;
+    }
+
     .note {
       margin-top: 8px;
       font-size: 0.75rem;
@@ -307,7 +332,12 @@
         </div>
       </div>
 
-      <div class="note">
+      <div id="countdownBar" class="countdown-bar">
+        <span class="countdown-label">Day ending in:</span>
+        <span id="countdownTime" class="countdown-time">--:--:--</span>
+      </div>
+
+      <div class=”note”>
         Keep this tab open and unmuted. Browser audio policy requires you to click “Arm bell” first.
       </div>
 

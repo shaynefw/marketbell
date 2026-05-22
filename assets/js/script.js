@@ -41,6 +41,40 @@ function updateClockDisplay() {
   if (clockEl) {
     clockEl.textContent = formatTime(nowEst);
   }
+  updateCountdown(nowEst);
+}
+
+function updateCountdown(nowEst) {
+  const countdownEl = document.getElementById("countdownTime");
+  if (!countdownEl) return;
+
+  const closeInput = document.getElementById("closeTime");
+  const closeCfg = parseTimeValue(closeInput?.value);
+
+  if (!closeCfg) {
+    countdownEl.textContent = "--:--:--";
+    return;
+  }
+
+  const nowMs = nowEst.getHours() * 3600000 + nowEst.getMinutes() * 60000 + nowEst.getSeconds() * 1000;
+  const closeMs = closeCfg.hour * 3600000 + closeCfg.minute * 60000;
+  let diff = closeMs - nowMs;
+
+  if (diff <= 0) {
+    countdownEl.textContent = "00:00:00";
+    return;
+  }
+
+  const h = Math.floor(diff / 3600000);
+  diff %= 3600000;
+  const m = Math.floor(diff / 60000);
+  diff %= 60000;
+  const s = Math.floor(diff / 1000);
+
+  countdownEl.textContent =
+    h.toString().padStart(2, "0") + ":" +
+    m.toString().padStart(2, "0") + ":" +
+    s.toString().padStart(2, "0");
 }
 
 function updateStatus(message, cssClass) {
